@@ -1,5 +1,10 @@
+const { boolean } = require("yargs");
 const { booleanToWord } = require("../src");
 
 describe("booleanToWord", () => {
-  // how do we create specs again???
+  test("returns 'yes' when passed true", () => {
+    expect(booleanToWord(true)).toBe('Yes')
+    expect(booleanToWord(false)).toBe('No')
+    
+  });
 });
