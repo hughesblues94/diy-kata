@@ -1,13 +1,19 @@
 const fizzBuzz = number => {
-    if(number % 3 === 0){
-        return "Fizz"
-    } else if (number % 5 === 0){
-        return "Buzz"
-    } else if(number % 3 === 0 && number % 5 === 0){
-        return "FizzBuzz"
-    } else if (number % 3 === !0 && number % 5 === !0){
-        return number; 
+    const isDivisableby3 = (number % 3) === 0;
+    const isDivisableby5 = (number % 5) === 0;
+
+    if (isDivisableby3 && isDivisableby5) {
+        return 'FizzBuzz'
+    }
+    else if (isDivisableby3) {
+        return 'Fizz'
+    }
+    else if (isDivisableby5) {
+        return 'Buzz'
+    } else {
+    return number;
     }
 };
+
 
 module.exports = fizzBuzz;
