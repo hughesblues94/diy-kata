@@ -11,7 +11,7 @@ const fizzBuzz = number => {
     else if (isDivisableby5) {
         return 'Buzz'
     } else {
-    return number;
+        return number;
     }
 };
 
